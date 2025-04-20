@@ -6,6 +6,12 @@ import java.util.List;
 public interface IReservationService {
     Reservation getReservationById(int reservationId);
     List<Reservation> getReservationsByCustomerId(int customerId);
+
+    /**
+     * Returns every reservation in the system.
+     */
+    List<Reservation> getAllReservations();
+
     void createReservation(Reservation reservation);
     void updateReservation(Reservation reservation);
     void cancelReservation(int reservationId);
